@@ -1,94 +1,114 @@
-@media screen and (min-width: 1200px) {
-  footer {
-    background-color: $accent-color;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+footer {
+  background-color: $accent-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
-  .footer-wrap {
-    display: flex;
-    align-items: baseline;
-    gap: 70px;
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-    &_list {
-      margin-top: 20px;
+  gap: 70px;
 
-      &--li {
-        margin-bottom: 9px;
-      }
-      &--adress {
-        line-height: 1.71;
-        color: $brand-white;
-        font-style: normal;
-        margin-bottom: 9px;
-
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover,
-        &:focus {
-          color: $action-color;
-          outline: none;
-        }
-      }
-
-      &--contact {
-        line-height: 1.71;
-        color: $footer-contact;
-        font-style: normal;
-        margin-bottom: 9px;
-
-        transition-property: color;
-        transition-duration: $defaultTransitionDuration;
-        transition-timing-function: $defaultTransitionTiming;
-
-        &:hover,
-        &:focus {
-          color: $action-color;
-          outline: none;
-        }
-      }
-    }
-  }
-
-  .join-us {
-    color: $brand-white;
-    font-size: 14px;
-    line-height: 1.1428;
-    letter-spacing: 0.03em;
-    font-weight: 700;
-  }
-
-  .newsletter-form {
-    display: flex;
+  &_list {
     margin-top: 20px;
 
-    &:hover,
-    &:focus {
-      border-color: #2196f3;
-      outline: none;
+    &--li {
+      margin-bottom: 9px;
     }
+    &--adress {
+      line-height: 1.71;
+      color: $brand-white;
+      font-style: normal;
+      margin-bottom: 9px;
 
-    &_input {
-      min-width: 358px;
-      height: 50px;
-      padding: 15px 16px 15px 16px;
-      border-radius: 4px;
-      color: $social-media-footer-color;
-      background-color: $accent-color;
-      border-style: none;
-      border: 1px solid $social-media-footer-color;
-      line-height: 1.25;
-      line-height: 20px;
-      font-size: 16px;
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover,
       &:focus {
-        border-color: $action-color;
-        color: $brand-white;
+        color: $action-color;
         outline: none;
       }
     }
+
+    &--contact {
+      line-height: 1.71;
+      color: $footer-contact;
+      font-style: normal;
+      margin-bottom: 9px;
+
+      transition-property: color;
+      transition-duration: $defaultTransitionDuration;
+      transition-timing-function: $defaultTransitionTiming;
+
+      &:hover,
+      &:focus {
+        color: $action-color;
+        outline: none;
+      }
+    }
+  }
+}
+
+.join-us {
+  color: $brand-white;
+  font-size: 14px;
+  line-height: 1.1428;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+
+  &:hover,
+  &:focus {
+    border-color: #2196f3;
+    outline: none;
+  }
+
+  &_input {
+    min-width: 358px;
+    height: 50px;
+    padding: 15px 16px 15px 16px;
+    border-radius: 4px;
+    color: $social-media-footer-color;
+    background-color: $accent-color;
+    border-style: none;
+    border: 1px solid $social-media-footer-color;
+    line-height: 1.25;
+    line-height: 20px;
+    font-size: 16px;
+
+    &:hover,
+    &:focus {
+      border-color: $action-color;
+      color: $brand-white;
+      outline: none;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+}
+
+@media screen and (min-width: $breakpoint-desktop-start) {
+  .footer-wrap {
+    text-align: left;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .newsletter-form {
+    flex-direction: row;
+    gap: 0px;
   }
 }
