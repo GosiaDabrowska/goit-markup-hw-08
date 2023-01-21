@@ -1,0 +1,111 @@
+.header-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_web {
+    color: $action-color;
+  }
+
+  &_studio--header {
+    color: $brand-black;
+  }
+
+  &_studio--footer {
+    color: $brand-white;
+  }
+}
+
+header {
+  border-bottom-color: $border-bottom-header;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 24px 0px;
+
+  nav {
+    margin-left: 93px;
+
+    .nav-list {
+      display: flex;
+      gap: 46px;
+
+      &_subpage {
+        position: relative;
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: $main-text-color;
+
+        transition-property: color;
+        transition-duration: $defaultTransitionDuration;
+        transition-timing-function: $defaultTransitionTiming;
+
+        &:hover,
+        &:focus {
+          color: $action-color;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.current {
+  color: $action-color;
+  transform: rotate(90deg);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: $action-color;
+    border-radius: 2px;
+    margin-top: 28px;
+  }
+}
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+
+  &_element {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--link {
+      display: flex;
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      fill: currentColor;
+      color: $description-text-color;
+
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $action-color;
+        outline: none;
+      }
+    }
+  }
+}

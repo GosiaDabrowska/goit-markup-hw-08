@@ -1,0 +1,41 @@
+.social-media-box {
+  display: flex;
+  margin-top: 16px;
+  gap: 10px;
+  justify-content: center;
+
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: $brand-grey-svg-icons;
+
+    transition-property: color, background-color;
+    transition-duration: $defaultTransitionDuration;
+    transition-timing-function: $defaultTransitionTiming;
+
+    &--footer {
+      margin-left: 0px;
+      color: $brand-white;
+      background-color: $social-media-footer-color;
+    }
+
+    &:focus,
+    &:hover {
+      color: $brand-white;
+      background-color: $action-color;
+      outline: none;
+    }
+
+    &--currentcolor {
+      fill: currentColor;
+    }
+  }
+}
+
+.svg-currentcolor {
+  fill: currentColor;
+}

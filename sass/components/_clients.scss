@@ -1,0 +1,26 @@
+.client-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  &_element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: $brand-grey-svg-icons;
+
+    transition-property: color;
+    transition-duration: $defaultTransitionDuration;
+    transition-timing-function: $defaultTransitionTiming;
+
+    &:hover,
+    &:focus {
+      color: $action-color;
+      outline: none;
+    }
+  }
+}

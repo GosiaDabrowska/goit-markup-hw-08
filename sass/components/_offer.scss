@@ -1,0 +1,21 @@
+.offer {
+  padding-top: 0px;
+}
+/* ====== tekst na obrazkach w sekcji "czym się zajmujemy" ====== */
+.positioned-thumb {
+  position: relative;
+
+  &_label {
+    position: absolute;
+    bottom: 0;
+    color: $brand-white;
+    background-color: $offer-photos;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
