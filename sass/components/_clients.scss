@@ -1,6 +1,7 @@
 .client-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 30px;
 
   &_element {
@@ -23,4 +24,13 @@
       outline: none;
     }
   }
+}
+
+@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  .client-wrap_li {
+    flex-basis: calc((100% - 40px) / 3);
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop-start) {
 }
