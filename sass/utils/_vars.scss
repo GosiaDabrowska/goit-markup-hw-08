@@ -24,3 +24,8 @@ $defaultTransitionDuration: 250ms;
 $defaultTransitionTiming: cubic-bezier(0.4, 0, 0.2, 1);
 
 $ButtonShadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+$breakpoint-phone-end: 767px;
+$breakpoint-tablet-start: 768px;
+$breakpoint-tablet-end: 1199px;
+$breakpoint-desktop-start: 1200px;

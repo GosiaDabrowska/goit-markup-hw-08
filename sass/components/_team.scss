@@ -1,9 +1,14 @@
+/* section-list styles using in this section are defined in globals.scss*/
+
 .section-team {
-  background-color: var(--section-color);
+  background-color: $section-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .box-team {
-  background-color: var(--brand-white);
+  background-color: $brand-white;
   border-bottom-right-radius: 4px 4px;
   border-bottom-left-radius: 4px 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -15,6 +20,7 @@
 
     &--names {
       font-weight: 500;
+      font-size: 16px;
       line-height: 1.19;
       margin-bottom: 10px;
       text-align: center;
@@ -23,8 +29,17 @@
     &--profession {
       font-size: 16px;
       line-height: 1.19;
-      color: var(--description-text-color);
+      color: $description-text-color;
       text-align: center;
     }
   }
+}
+
+@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  .box-team {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop-start) {
 }

@@ -1,20 +1,23 @@
 .hero-section {
   background-color: $accent-color;
   text-align: center;
-  padding: 200px 0px;
+  padding: 118px 0px;
   background-image: linear-gradient(to bottom, $showcase-bg, $showcase-bg),
-    url('../images/header.jpg');
+    url('../images/hero1200@1.jpg');
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 1600px;
-  max-height: 600px;
+  max-width: 480px;
+  max-height: 400px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &_title {
-    width: 696px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
@@ -24,5 +27,43 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, $showcase-bg, $showcase-bg),
+      url(/images/hero1200@2.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, $showcase-bg, $showcase-bg),
+      url(/images/hero1200@3.jpg);
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  .hero-section {
+    max-width: 768px;
+    max-height: 400px;
+
+    &_title {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop-start) {
+  .hero-section {
+    max-width: 1600px;
+    max-height: 600px;
+    padding: 200px 0px;
+
+    &_title {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
 }

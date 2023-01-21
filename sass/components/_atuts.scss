@@ -1,7 +1,9 @@
+/* section-list styles are in globals.scss*/
+
 .section-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 30px;
 
   &_icons {
@@ -9,6 +11,9 @@
     margin-bottom: 30px;
     padding: 25px 100px;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &_header {
@@ -17,9 +22,32 @@
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 10px;
+    text-align: center;
   }
+
   &_description {
     line-height: 1.71;
     color: $description-text-color;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  .section-list {
+    &_element {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    &_header {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop-start) {
+  .section-list {
+    flex-wrap: nowrap;
+    &_header {
+      text-align: left;
+    }
   }
 }
