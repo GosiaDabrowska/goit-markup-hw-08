@@ -9,14 +9,13 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  gap: 70px;
+  gap: 60px;
 
   &_list {
     margin-top: 20px;
 
     &--li {
-      margin-bottom: 9px;
+      gap: 8px;
     }
     &--adress {
       line-height: 1.71;
@@ -66,7 +65,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
   gap: 20px;
 
   &:hover,
@@ -98,6 +96,17 @@ footer {
 }
 
 @media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  .footer-wrap {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-form {
+    &_input {
+      min-width: 450px;
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint-desktop-start) {
@@ -105,10 +114,21 @@ footer {
     text-align: left;
     flex-direction: row;
     align-items: baseline;
+
+    &_list {
+      &--li {
+        margin-bottom: 9px;
+      }
+    }
   }
 
   .newsletter-form {
     flex-direction: row;
     gap: 0px;
+    margin-top: 20px;
+
+    &_input {
+      min-width: 358px;
+    }
   }
 }

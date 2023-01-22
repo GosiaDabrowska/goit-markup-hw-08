@@ -27,9 +27,7 @@
 }
 
 header {
-  border-bottom-color: $border-bottom-header;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom: $border-bottom-header solid 1px;
   padding: 24px 0px;
 
   nav {
@@ -120,7 +118,14 @@ header {
   .contact-list_element--link {
     font-size: 12px;
   }
+
+  nav {
+    margin-left: 83px;
+  }
 }
 
 @media screen and (min-width: $breakpoint-desktop-start) {
+  nav {
+    margin-left: 93px;
+  }
 }
