@@ -1,5 +1,6 @@
 .header-wrap {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -31,10 +32,13 @@ header {
   padding: 24px 0px;
 
   nav {
-    margin-left: 93px;
+    display: flex;
+    align-items: center;
 
     .nav-list {
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       gap: 46px;
 
       &_subpage {
