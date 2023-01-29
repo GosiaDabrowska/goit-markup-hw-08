@@ -110,3 +110,9 @@
     outline: none;
   }
 }
+
+@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  .button-newsletter {
+    width: 100%;
+  }
+}

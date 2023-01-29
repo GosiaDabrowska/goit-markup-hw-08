@@ -74,7 +74,7 @@ footer {
   }
 
   &_input {
-    min-width: 358px;
+    width: 100%;
     height: 50px;
     padding: 15px 16px 15px 16px;
     border-radius: 4px;
@@ -105,6 +105,7 @@ footer {
   .newsletter-form {
     &_input {
       min-width: 450px;
+      flex-direction: row;
     }
   }
 }
@@ -112,7 +113,6 @@ footer {
 @media screen and (min-width: $breakpoint-desktop-start) {
   .footer-wrap {
     text-align: left;
-    flex-direction: row;
     align-items: baseline;
 
     &_list {

@@ -32,12 +32,10 @@ header {
   padding: 24px 0px;
 
   nav {
-    display: flex;
-    align-items: center;
+    display: none;
 
     .nav-list {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
       gap: 46px;
 
@@ -79,7 +77,7 @@ header {
 }
 
 .contact-list {
-  display: flex;
+  display: none;
   margin-left: auto;
   gap: 50px;
 
@@ -114,6 +112,7 @@ header {
 
 @media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
   .contact-list {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -125,11 +124,31 @@ header {
 
   nav {
     margin-left: 83px;
+    display: flex;
+    align-items: center;
+
+    .nav_list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint-desktop-start) {
   nav {
+    display: flex;
     margin-left: 93px;
+    align-items: center;
+
+    .nav_list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .contact-list {
+    display: flex;
   }
 }
