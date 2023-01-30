@@ -112,8 +112,9 @@ footer {
 
 @media screen and (min-width: $breakpoint-desktop-start) {
   .footer-wrap {
-    text-align: left;
+    flex-direction: row;
     align-items: baseline;
+    gap: 70px;
 
     &_list {
       &--li {
