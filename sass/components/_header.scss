@@ -29,7 +29,7 @@
 
 header {
   border-bottom: $border-bottom-header solid 1px;
-  padding: 24px 0px;
+  padding: 10px 0px;
 
   nav {
     display: none;
@@ -111,6 +111,10 @@ header {
 }
 
 @media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
+  header {
+    padding: 19px 0px;
+  }
+
   .contact-list {
     display: flex;
     flex-direction: column;
@@ -136,6 +140,10 @@ header {
 }
 
 @media screen and (min-width: $breakpoint-desktop-start) {
+  header {
+    padding: 19px 0px;
+  }
+
   nav {
     display: flex;
     margin-left: 93px;
