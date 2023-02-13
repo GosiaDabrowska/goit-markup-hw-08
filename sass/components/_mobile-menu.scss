@@ -1,16 +1,3 @@
-@media (max-width: $breakpoint-phone-end) {
-  .nav-list,
-  .contact-list {
-    display: none;
-  }
-}
-
-@media screen and (min-width: $breakpoint-tablet-start) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
 .svg-close-button {
   color: $main-text-color;
 }
@@ -26,12 +13,13 @@
   padding-bottom: 20px;
   background-color: $brand-white;
   z-index: 999;
-  display: flex;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 10px;
+  color: $main-text-color;
 
   &.is-open {
     transform: translateX(0);
@@ -104,7 +92,7 @@
     line-height: 1.22;
     color: $action-color;
     gap: 10px;
-    &::after {
+    &:not(:last-child):after {
       content: '';
       transform: rotate(90deg);
       width: 22px;
@@ -133,6 +121,19 @@
   &:hover,
   &:focus {
     color: $action-color;
+  }
+}
+
+@media (max-width: $breakpoint-phone-end) {
+  .nav-list,
+  .contact-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-start) {
+  .menu-toggle {
+    display: none;
   }
 }
 

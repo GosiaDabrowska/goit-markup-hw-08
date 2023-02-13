@@ -29,11 +29,9 @@
 
 header {
   border-bottom: $border-bottom-header solid 1px;
-  padding: 10px 0px;
+  padding: 20px 0px;
 
   nav {
-    display: none;
-
     .nav-list {
       display: flex;
       flex-wrap: wrap;
@@ -107,6 +105,12 @@ header {
         outline: none;
       }
     }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet-start) {
+  .nav {
+    display: none;
   }
 }
 

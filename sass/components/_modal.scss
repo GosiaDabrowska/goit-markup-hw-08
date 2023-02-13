@@ -40,6 +40,15 @@
   transition-property: transform;
 }
 
+@media screen and (max-width: $breakpoint-tablet-end) {
+  .backdrop_modal {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+}
 @media screen and (min-width: $breakpoint-desktop-start) {
   .backdrop_modal {
     width: 528px;
