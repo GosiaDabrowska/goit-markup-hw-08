@@ -42,4 +42,13 @@
 }
 
 @media screen and (min-width: $breakpoint-desktop-start) {
+  .box-team {
+    flex-basis: calc(100%);
+  }
+
+  .section-team {
+    background-color: $section-color;
+    display: flex;
+    justify-content: center;
+  }
 }
