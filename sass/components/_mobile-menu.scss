@@ -1,5 +1,9 @@
 .svg-close-button {
   color: $main-text-color;
+  &:hover,
+  &:focus {
+    color: $action-color;
+  }
 }
 
 .menu-container {
@@ -109,7 +113,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -123,19 +126,8 @@
     color: $action-color;
   }
 }
-
-@media (max-width: $breakpoint-phone-end) {
-  .nav-list,
-  .contact-list {
-    display: none;
-  }
-}
-
 @media screen and (min-width: $breakpoint-tablet-start) {
   .menu-toggle {
     display: none;
   }
-}
-
-@media screen and (min-width: $breakpoint-desktop-start) {
 }

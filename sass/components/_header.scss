@@ -1,6 +1,5 @@
 .header-wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -27,26 +26,84 @@
   }
 }
 
-header {
-  border-bottom: $border-bottom-header solid 1px;
-  padding: 20px 0px;
+@media screen and (min-width: $breakpoint-tablet-start) {
+  header {
+    border-bottom: $border-bottom-header solid 1px;
+    padding: 19px 0px;
 
-  nav {
-    .nav-list {
+    nav {
+      margin-left: 83px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 46px;
+      align-items: center;
 
-      &_subpage {
-        position: relative;
+      .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 46px;
+
+        &_subpage {
+          position: relative;
+          font-weight: 500;
+          line-height: 1.14;
+          letter-spacing: 0.02em;
+          color: $main-text-color;
+
+          transition-property: color;
+          transition-duration: $defaultTransitionDuration;
+          transition-timing-function: $defaultTransitionTiming;
+
+          &:hover,
+          &:focus {
+            color: $action-color;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .current {
+    color: $action-color;
+    transform: rotate(90deg);
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: $action-color;
+      border-radius: 2px;
+      margin-top: 28px;
+    }
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    &_element {
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &--link {
+        display: flex;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.14;
         letter-spacing: 0.02em;
-        color: $main-text-color;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        fill: currentColor;
+        color: $description-text-color;
 
         transition-property: color;
-        transition-duration: $defaultTransitionDuration;
-        transition-timing-function: $defaultTransitionTiming;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover,
         &:focus {
@@ -58,109 +115,18 @@ header {
   }
 }
 
-.current {
-  color: $action-color;
-  transform: rotate(90deg);
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: $action-color;
-    border-radius: 2px;
-    margin-top: 28px;
+@media screen and (min-width: $breakpoint-desktop-start) {
+  .contact-list {
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: auto;
+    gap: 30px;
   }
 }
 
-.contact-list {
-  display: none;
-  margin-left: auto;
-  gap: 50px;
-
-  &_element {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &--link {
-      display: flex;
-      font-weight: 500;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      fill: currentColor;
-      color: $description-text-color;
-
-      transition-property: color;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-      &:hover,
-      &:focus {
-        color: $action-color;
-        outline: none;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $breakpoint-tablet-start) {
-  .nav {
+@media screen and (max-width: $breakpoint-phone-end) {
+  nav,
+  .contact-list {
     display: none;
   }
-}
-
-@media screen and (min-width: $breakpoint-tablet-start) and (max-width: $breakpoint-tablet-end) {
-  header {
-    padding: 19px 0px;
-  }
-
-  .contact-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .contact-list_element--link {
-    font-size: 12px;
-  }
-
-  nav {
-    margin-left: 83px;
-    display: flex;
-    align-items: center;
-
-    .nav_list {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  }
-}
-
-@media screen and (min-width: $breakpoint-desktop-start) {
-  header {
-    padding: 19px 0px;
-  }
-
-  nav {
-    display: flex;
-    margin-left: 93px;
-    align-items: center;
-
-    .nav_list {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  }
-
-  .contact-list {
-    display: flex;
-  }
-}
+} ;
